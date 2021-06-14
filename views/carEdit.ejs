@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="icon" href="/img/Безымянный.png">
+        <link rel="stylesheet" href="/css/profile.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="/js/google-translate.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+        <title>Car Details</title>
+    </head>
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main"><img src="" alt=""> <img src="/img/logo_size-removebg-preview.png" alt="" height="360" width="300px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="f alse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="main">Main Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/users/owner/<%= owner.id %>">Profile Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/users/owner/<%= owner.id %>/view">My Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/users/owner/<%= owner.id %>/cars">Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/users/logout">Log out</a>
+                            </li>
+                            <div class="language">
+                                <img src="/img/lng/lang__en.png" alt="en" data-google-lang="en" class="language__img">
+                                <img src="/img/lng/lang__ru.png" alt="ru" data-google-lang="ru" class="language__img">
+                            </div>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <br><br><br>
+    <table class="table">
+        <form action="/users/owner/<%= owner.id %>/view/<%= car.car_id%> /edit" method="post">
+            <tr>
+                <img class="image" src="/img/upload_images/<%= car.img_name%>">
+            </tr>
+            <tr>
+                <td scope="col">#</td>
+                <td><%= car.car_id %></td>
+            </tr>
+            <tr>
+                <td>Car Brand: </td>
+                <th><input value="<%=car.car_brand%>" class="enter" type="text" name="car_brand" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Registration Number: </td>
+                <th><input value="<%=car.registration_number%>" class="enter" type="text" name="registration_number" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Model: </td>
+                <th><input value="<%=car.model%>" class="enter" type="text" name="model" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Category: </td>
+                <th><input value="<%=car.category%>" class="enter" type="text" name="category" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Certification Date: </td>
+                <th><input value="<%=car.certificate_date%>" class="enter" type="text" name="certificate_date" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>VIN: </td>
+                <th><input value="<%=car.vin%>" class="enter" type="text" name="vin" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Release Year: </td>
+                <th><input value="<%=car.release_year%>" class="enter" type="text" name="release_year" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Engine Capacity: </td>
+                <th><input value="<%=car.engine_capacity%>" class="enter" type="text" name="engine_capacity" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Mass Without Load: </td>
+                <th><input value="<%=car.mass_without_load%>" class="enter" type="text" name="mass_without_load" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Max Mass Permitted: </td>
+                <th><input value="<%=car.max_mass_perm%>" class="enter" type="text" name="max_mass_perm" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <td>Series Certification: </td>
+                <th><input value="<%=car.series_certificate%>" class="enter" type="text" name="series_certificate" required placeholder="Enter Your name"></th>
+            </tr>
+            <tr>
+                <th><button class="btn btn-warning" type="submit">Save</button></th>
+            </tr>
+        </form>
+    </table>
+    </body>
+    <footer>
+        <div class="container2" id="con2">
+            <div class="row">
+                <div class="col-6 col-md-4" id="expressnqz1"> </div>
+                <div class="col-6 col-md-4" id="expressnqz2">Help</div>
+                <div class="col-6 col-md-4" id="expressnqz3">We are here</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4"><a href="#carouselExampleControls"> <img src="/img/logo_size-removebg-preview2.png" alt=""></a></div>
+                <br>
+                <div class="col-6 col-md-4"><a href="mailto: rrruslaaan@gmail.com" target="_blank">Contact us</a></div>
+                <div class="col-6 col-md-4"><a href="https://t.me/joinchat/Yv8v89yXaVxiNjcy" target="_blank"><img src="http://pngimg.com/uploads/telegram/telegram_PNG35.png" height="48px"></a><a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" height="48px">
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+</html>

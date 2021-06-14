@@ -1,0 +1,59 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    height: 100px;
+    border: 0px;
+    padding-left: 80px;
+    padding-top: 30px;
+    font-size: 1px;
+}
+
+.navbar-nav li{
+    padding-left:50px;
+    padding-right:50px;
+    font-size: 26px;
+}
+
+h2{
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    padding: 21px;
+    background-color: rgb(235, 235, 235);
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer{
+    background-color: rgb(235, 235, 235);
+    height: 190px;
+}
+
+
+.language {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.language__img {
+    margin: 2px;
+    cursor: pointer;
+    opacity: .5;
+    width: 30px;
+    height: 20px;
+}
+
+.language__img:hover,
+.language__img_active {
+    opacity: 1;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="icon" href="/img/Безымянный.png">
+        <link rel="stylesheet" href="/css/profile.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="/js/google-translate.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+        <title>Profile Page</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="main"><img src="" alt=""> <img src="/img/logo_size-removebg-preview.png" alt="" height="360" width="300px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="f alse" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="d-flex">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="main">Main Page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/users/owner/<%= data.id %>">Profile Page</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/users/owner/<%= data.id %>/view">My Cars</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/users/owner/<%= data.id %>/cars ">Cars</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/users/logout">Log out</a>
+                                </li>
+                                <div class="language">
+                                    <img src="/img/lng/lang__en.png" alt="en" data-google-lang="en" class="language__img">
+                                    <img src="/img/lng/lang__ru.png" alt="ru" data-google-lang="ru" class="language__img">
+                                </div>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <br><br><br><br><br><br>
+        <div class="container">
+            <h1>Profile Page</h1>
+        </div>
+
+        <br><br><br>
+
+        <h1>Hello, <%= data.first_name%></h1>
+
+        <div class="table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="row"><%= data.id %></th>
+                </tr>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <td><%= data.first_name %></td>
+                </tr>
+                <tr>
+                    <th scope="col">Second Name</th>
+                    <td><%= data.second_name %></td>
+                </tr>
+                <tr>
+                    <th scope="col">Date of Birth</th>
+                    <td><%= data.date_of_birth %></td>
+                </tr>
+                <tr>
+                    <th scope="col">Address</th>
+                    <td><%= data.address %></td>
+                </tr>
+                <tr>
+                    <th scope="col">Phone Number</th>
+                    <td><%= data.phone_number %></td>
+                </tr>
+                <tr>
+                    <th scope="col">Email</th>
+                    <td><%= data.email %></td>
+                </tr>
+                <tr>
+                    <td><a href="/users/owner/<%= data.id %>/edit" class="btn btn-warning">Edit</a></td>
+                    <form action="/users/owner/<%= data.id %>/delete" method="post">
+                        <td><button class="btn btn-warning" type="submit">Delete</button></td>
+                    </form>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+        <br><br><br>
+
+
+
+
+        <div class="container">
+            <% if(messages.success_msg) { %>
+                <h4><%= messages.success_msg %></h4>
+            <% } %>
+            <a href="/users/owner/<%= data.id %>/car">Add a Car</a>
+        </div>
+
+        <br><br><br>
+    </body>
+    <footer>
+        <div class="container2" id="con2">
+            <div class="row">
+                <div class="col-6 col-md-4" id="expressnqz1"> </div>
+                <div class="col-6 col-md-4" id="expressnqz2">Help</div>
+                <div class="col-6 col-md-4" id="expressnqz3">We are here</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4"><a href="#carouselExampleControls"> <img src="/img/logo_size-removebg-preview2.png" alt=""></a></div>
+                <br>
+                <div class="col-6 col-md-4"><a href="mailto: rrruslaaan@gmail.com" target="_blank">Contact us</a></div>
+                <div class="col-6 col-md-4"><a href="https://t.me/joinchat/Yv8v89yXaVxiNjcy" target="_blank"><img src="http://pngimg.com/uploads/telegram/telegram_PNG35.png" height="48px"></a><a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" height="48px">
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+</html>

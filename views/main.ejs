@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="icon" href="/img/Безымянный.png">
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="/js/google-translate.js"></script>
+        <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+        <title>Rentio</title>
+    </head>
+    <body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="main"><img src="" alt=""> <img src="/img/logo_size-removebg-preview.png" alt="" height="360" width="300px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="f alse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <form class="d-flex">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#main">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#main">Main</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#offers">Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#price">Prices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#expressnqz">Connection</a>
+                            </li>
+                            <div class="language">
+                                <img src="/img/lng/lang__en.png" alt="en" data-google-lang="en" class="language__img">
+                                <img src="/img/lng/lang__ru.png" alt="ru" data-google-lang="ru" class="language__img">
+                            </div>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <div class="header-intro">
+            <div class="header-intro-mask">
+                <div class="wrap">
+                    <h1 class="header-intro__title">Rentio<br>
+                        CarSharing Service
+                    </h1>
+                    <p class="header-intro__desc">Unconditional freedom of movement</p>
+                    <a href="/users/registration" target="_blank" class="btn header-intro__btn">Sign Up</a>
+                    <a href="/users/login" target="_blank" class="btn header-intro__btn">Sign In</a>
+                    <ul>
+                        <% if (typeof errors != 'undefined') { %> <% errors.forEach(error => { %>
+                        <li><%= error.message %></li>
+                        <% }) %> <% } %>
+                    </ul>
+                    <ul>
+                        <% if(messages.success_msg) { %>
+                            <li><%= messages.success_msg %></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2 id="offers">Cars</h2>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"><h3>Comfort</h3>ipsum dolor sit amet consectetur adipisicing elit. Quibusdam non veniam nobis soluta voluptates dignissimos alias distinctio, et nostrum! Necessitatibus, beatae excepturi, sunt temporibus eveniet quibusdam sint debitis numquam soluta eum sapiente? Magni nisi, tempora, ipsam tempore exercitationem facere a explicabo perferendis enim cumque eius, quos inventore iure sed dolorem. <br>
+            </div>
+            <div class="col-6"><img src="https://autoua.net/media/uploads/vw/2019-vw-passat-variant-r-line-edition.jpg" class="card-img-top"></div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"><img src="https://static.lada.ru/images_new/cars/about/granta/g_se/v1_gsed.jpg" class="card-img-top"></div>
+            <div class="col-6"><h3>Economy</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatum quisquam esse magnam mollitia. Esse optio, dolorem voluptatum eligendi iure praesentium vel beatae aspernatur repellat iste, deleniti possimus alias nulla? Dicta distinctio, in et ad cupiditate excepturi deserunt sunt veniam quisquam illum rem nihil consequatur iure quia voluptatum laborum obcaecati! <br>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-6"><h3>Business</h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolor cum quasi nihil numquam fugit doloremque magni, similique dolorum! Provident maiores atque repudiandae ab laudantium hic vitae adipisci alias, suscipit beatae sint nobis quis quam eius tenetur, ipsa laborum. Sequi fugit maxime quod quam ipsum placeat dignissimos ratione, error beatae. <br>
+            </div>
+            <div class="col-6"><img src="https://strg2.nm.kz/neofiles/serve-image/5f36663f089e710006dece5a/1190x500/q90" class="card-img-top"></div>
+        </div> <br>
+        <a href="categories" class="btn btn-secondary btn-lg d-md-flex justify-content-md-center" target="_blank">All categories</a>
+    </div>
+    <br>
+    <h2 id="price">Price</h2>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem; height: 25rem;">
+                <img src="https://strg2.nm.kz/neofiles/serve-image/5f36663f089e710006dece5a/1190x500/q90" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Volkswagen Polo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique error reiciendis necessitatibus officia labore dolorum quibusdam nulla odio amet iusto?
+                    </p>
+                    <a href="#carouselExampleControls" class="btn btn-primary">9500₸ per ride</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem; height: 25rem;">
+                <img src="https://static.lada.ru/images_new/cars/about/granta/g_se/v1_gsed.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Lada Granta</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque laborum dolorem exercitationem vero cum suscipit!</p>
+                    <a href="#carouselExampleControls" class="btn btn-primary">8000₸ per ride</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mx-auto" style="width: 18rem; height: 25rem;">
+                <img src="https://autoua.net/media/uploads/vw/2019-vw-passat-variant-r-line-edition.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Volkswagen Passat</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quaerat magni, vero ex quisquam provident!</p>
+                    <a href="#carouselExampleControls" class="btn btn-primary">9500₸ per ride</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <br>
+    <footer>
+        <div class="container" id="con2">
+            <div class="row">
+                <div class="col-6 col-md-4" id="expressnqz"> </div>
+                <div class="col-6 col-md-4" id="expressnqz2">Help</div>
+                <div class="col-6 col-md-4" id="expressnqz3">We are here</div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-4"><a href="#carouselExampleControls"> <img src="/img/logo_size-removebg-preview2.png" alt=""></a></div>
+                <br>
+                <div class="col-6 col-md-4"><a href="mailto: rrruslaaan@gmail.com" target="_blank">Contact us</a></div>
+                <div class="col-6 col-md-4"><a href="https://t.me/joinchat/Yv8v89yXaVxiNjcy" target="_blank"><img src="http://pngimg.com/uploads/telegram/telegram_PNG35.png" height="48px"></a><a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" height="48px">
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+</html>
